@@ -1,0 +1,24 @@
+services:
+  api:
+    build: .
+    image: hr-attrition-ml:local
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      ENABLE_SHAP: "0"
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - .:/app
+
+  dashboard:
+    build: .
+    image: hr-attrition-ml:local
+    command: streamlit run app/streamlit_app.py --server.address 0.0.0.0 --server.port 8501
+    ports:
+      - "8501:8501"
+    environment:
+      ENABLE_SHAP: "0"
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - .:/app
