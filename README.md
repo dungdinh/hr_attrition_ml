@@ -1,14 +1,15 @@
 # HR Attrition ML Production Project
 
+This project is designed to explore how the ChatGPT LLM can assist us in minimizing the effort required for the end-to-end process of an ML project.
 Production-ready project for predicting employee attrition probability with:
 - 5-model benchmark
-- cross validation
-- hyperparameter tuning
+- Cross validation
+- Hyperparameter tuning
 - ROC curve
 - SHAP explainability
-- feature importance visualization
-- auto model selection
-- model export to `.pkl`
+- Feature importance visualization
+- Auto model selection
+- Model export to `.pkl`
 - FastAPI inference service
 - Streamlit dashboard for HR risk scoring
 - Docker and GitHub Actions CI/CD
